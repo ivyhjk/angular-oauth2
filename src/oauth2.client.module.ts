@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
     imports: [],
     providers: []
 })
-export class OAuth2Module
+export class OAuth2ClientModule
 {
 
 }
