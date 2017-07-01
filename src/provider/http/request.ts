@@ -13,6 +13,13 @@ import {
 export abstract class Request
 {
     /**
+     * The request full path url.
+     *
+     * @var mixed[null|string]
+     */
+    private _url: null|string = null;
+
+    /**
      * Generate a new HTTP request object.
      *
      * @param @angular.http.Http _http The Angular HTTP service.
@@ -78,6 +85,30 @@ export abstract class Request
         }
 
         return this.options.headers;
+    }
+
+    /**
+     * Get the Angular HTTP service.
+     *
+     * @return @angular.http.Http
+     */
+    public get http() : Http
+    {
+        return this._http;
+    }
+
+    /**
+     * Get the request full path url.
+     *
+     * @return string
+     */
+    public get url() : string
+    {
+        if (this._url === null) {
+            this._url = this.resourceServer + this.endpoint;
+        }
+
+        return this._url;
     }
 
     /**
