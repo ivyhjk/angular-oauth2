@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@angular/core": "^4.2.4",
-    "@angular/http": "^4.2.4"
+    "@angular/http": "^4.2.4",
+    "@angular/router": "^4.2.5"
   }
 }
